@@ -1,23 +1,33 @@
+const btn1 = document.querySelector(".btn-home");
+btn1.addEventListener("click", function () {
+  show("home");
+});
 
-var btn = document.getElementById("btn-home");
-btn.addEventListener('click', show("home"));
+const btn2 = document.querySelector(".btn-zawodnicy");
+btn2.addEventListener("click", function () {
+  show("zawodnicy");
+});
 
-btn = document.getElementById("btn-zawodnicy")
-btn.addEventListener('click', show("zawodnicy"))
+const btn3 = document.querySelector(".btn-stadion");
+btn3.addEventListener("click", function () {
+  show("stadion");
+});
 
-btn = document.getElementById("btn-stadion")
-btn.addEventListener('click', show("stadion"))
+const btn4 = document.querySelector(".btn-liga");
+btn4.addEventListener("click", function () {
+  show("liga");
+});
 
-btn = document.getElementById("btn-liga")
-btn.addEventListener('click', show("liga"))
+function show(sectionShow) {
+  const sections = document.getElementsByClassName("section");
 
-function show(zakladka) {
-    var p = document.getElementsByClassName("section_home")
-
-    for (let x of p) {
-        x.style.display="none";
+  for (const section of sections) {
+    if (section.classList.contains("off")) {
+      section.classList.remove("off");
     }
-    
-    let section = document.getElementById(zakladka)
-    section.style.display = "block";
+    section.classList.add("off");
+  }
+
+  const d = document.getElementById(sectionShow);
+  d.classList.remove("off");
 }
