@@ -23,9 +23,5 @@ To run this project locally, you’ll need:
    ```bash  
    git clone https://github.com/sudyk1/chelsea-website-forstudies.git
    ```  
-2. Navigate to the project directory:
-  ```bash
-  Copy code
-  cd chelsea-website-forstudies
-  ```
+2. Navigate to the project directory.
 3. Open index.html in your browser to view the website locally.
